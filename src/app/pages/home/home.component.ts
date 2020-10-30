@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
-export class HomePage {
+export class HomeComponent implements OnInit {
   public router: Router;
 
   constructor(router: Router) {
     this.router = router;
   }
+
+  ngOnInit() {}
 
   public async onClick() {
     this.router.navigate(['/list']);

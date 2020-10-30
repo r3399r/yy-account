@@ -5,7 +5,8 @@ import {
   RouterModule,
   Routes,
 } from '@angular/router';
-import { HomePage } from 'src/app/home/home.page';
+// import { HomePage } from 'src/app/home/home.page';
+import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ListComponent } from 'src/app/pages/list/list.component';
 
 const rootRoute: Route = {
@@ -16,7 +17,7 @@ const rootRoute: Route = {
 
 const publicRoute: Route = {
   path: 'home',
-  component: HomePage,
+  component: HomeComponent,
 };
 
 const privateRoute: Route = {
