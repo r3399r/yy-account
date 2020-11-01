@@ -5,9 +5,9 @@ import {
   RouterModule,
   Routes,
 } from '@angular/router';
-// import { HomePage } from 'src/app/home/home.page';
+import { AppComponent } from 'src/app/app.component';
+import { AccountingBookComponent } from 'src/app/pages/accounting-book/accounting-book.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
-import { ListComponent } from 'src/app/pages/list/list.component';
 
 const rootRoute: Route = {
   path: '',
@@ -15,17 +15,24 @@ const rootRoute: Route = {
   pathMatch: 'full',
 };
 
-const publicRoute: Route = {
+// Route children
+const homeRoute: Route = {
   path: 'home',
   component: HomeComponent,
 };
-
-const privateRoute: Route = {
-  path: 'list',
-  component: ListComponent,
+const accountingBookRoute: Route = {
+  path: 'accounting-book/:id',
+  component: AccountingBookComponent,
 };
 
-const routes: Routes = [rootRoute, publicRoute, privateRoute];
+// Route
+const privateRoute: Route = {
+  path: '',
+  component: AppComponent,
+  children: [homeRoute, accountingBookRoute],
+};
+
+const routes: Routes = [rootRoute, privateRoute];
 
 @NgModule({
   imports: [
