@@ -9,9 +9,11 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class AccountingBookComponent implements OnInit {
   public route: ActivatedRoute;
   public id: string;
+  public transactionDetails: string[];
 
   constructor(route: ActivatedRoute) {
     this.route = route;
+    this.transactionDetails = ['a', 'b', 'cc'];
   }
 
   public ngOnInit(): void {

@@ -24,3 +24,16 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+/* uikit package */
+// 1. Your custom variables and variable overwrites.
+// $grid-gutter-horizontal: 0px;
+
+// 2. Import default variables and available mixins.
+@import 'uikit/src/scss/variables-theme.scss';
+@import 'uikit/src/scss/mixins-theme.scss';
+
+// 3. Your custom mixin overwrites.
+
+// 4. Import UIkit.
+@import 'uikit/src/scss/uikit-theme.scss';
