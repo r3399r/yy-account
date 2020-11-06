@@ -5,12 +5,12 @@
     uk-grid
   >
     <div *ngFor="let book of books" (click)="onClick(book.id)">
-      <div class="uk-card uk-card-small uk-card-default uk-card-body">
+      <div class="clickable uk-card uk-card-small uk-card-default uk-card-body">
         {{ book.name }}
       </div>
     </div>
     <div>
-      <div class="uk-card uk-card-small uk-card-primary uk-card-body">
+      <div class="clickable uk-card uk-card-small uk-card-primary uk-card-body">
         新增帳本 <span uk-icon="plus-circle"></span>
       </div>
     </div>

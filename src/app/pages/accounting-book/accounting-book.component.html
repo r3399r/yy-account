@@ -1,12 +1,12 @@
 <div class="content">
-  <h1>{{ id }}</h1>
+  <h1>{{ book.name }}</h1>
   <ul uk-accordion="multiple: true">
-    <li *ngFor="let detail of transactionDetails">
-      <a class="uk-accordion-title" href="#">{{ detail }}</a>
+    <li *ngFor="let transaction of book.transactions">
+      <a class="uk-accordion-title" href="#">{{ transaction.date }}</a>
       <div class="uk-accordion-content">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          {{ transaction.cost }}
+          {{ transaction.memo }}
         </p>
       </div>
     </li>
