@@ -1,4 +1,4 @@
-<div class="content">
+<div class="container">
   <h1>帳本清單</h1>
   <div
     class="uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m"
@@ -10,9 +10,15 @@
       </div>
     </div>
     <div>
-      <div class="clickable uk-card uk-card-small uk-card-primary uk-card-body">
+      <div
+        class="clickable uk-card uk-card-small uk-card-primary uk-card-body"
+        (click)="addPhotoToGallery()"
+      >
         新增帳本 <span uk-icon="plus-circle"></span>
       </div>
     </div>
+  </div>
+  <div *ngFor="let photo of photos">
+    <ion-img [src]="photo.webviewPath"></ion-img>
   </div>
 </div>
