@@ -10,15 +10,9 @@
       </div>
     </div>
     <div>
-      <div
-        class="clickable uk-card uk-card-small uk-card-primary uk-card-body"
-        (click)="addPhotoToGallery()"
-      >
+      <div class="clickable uk-card uk-card-small uk-card-primary uk-card-body">
         新增帳本 <span uk-icon="plus-circle"></span>
       </div>
     </div>
-  </div>
-  <div *ngFor="let photo of photos">
-    <ion-img [src]="photo.webviewPath"></ion-img>
   </div>
 </div>
