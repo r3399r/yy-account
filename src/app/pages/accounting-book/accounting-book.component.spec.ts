@@ -7,7 +7,7 @@ import { Book } from 'src/app/model/Book';
 import { AccountingBookComponent } from 'src/app/pages/accounting-book/accounting-book.component';
 import { BookService } from 'src/app/services/book.service';
 
-describe('AccountingBookComponent', () => {
+describe('AccountingBookComponent', (): void => {
   let component: AccountingBookComponent;
   let fixture: ComponentFixture<AccountingBookComponent>;
 
@@ -33,7 +33,7 @@ describe('AccountingBookComponent', () => {
     { id: 'ab24-asc5', name: 'other book' },
   ];
 
-  beforeEach(async(() => {
+  beforeEach(async((): void => {
     // mock method
     bookServiceSpy = jasmine.createSpyObj('bookService', ['getBook']);
     bookServiceSpy.getBook.and.returnValue(dummyBooks[0]);
@@ -57,7 +57,7 @@ describe('AccountingBookComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
+  it('should create', (): void => {
     expect(component).toBeTruthy();
   });
 });

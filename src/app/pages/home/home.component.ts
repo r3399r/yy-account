@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
     this.books = bookService.getBooks();
   }
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 
-  public async onClick(id: string) {
+  public async onClick(id: string): Promise<void> {
     this.router.navigate([`/accounting-book/${id}`]);
   }
 }

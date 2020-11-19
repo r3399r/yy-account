@@ -7,7 +7,7 @@ import { Book } from 'src/app/model/Book';
 export class BookService {
   private books: Book[] = [
     {
-      id: 'a100-4f2f',
+      id: '001',
       name: 'yy account',
       transactions: [
         {
@@ -22,7 +22,6 @@ export class BookService {
         },
       ],
     },
-    { id: 'ab24-asc5', name: 'other book' },
   ];
 
   constructor() {}
@@ -32,7 +31,7 @@ export class BookService {
   }
 
   public getBook(id: string): Book {
-    return this.books.find((book) => {
+    return this.books.find((book: Book): boolean => {
       return book.id === id;
     });
   }
